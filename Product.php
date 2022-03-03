@@ -104,9 +104,3 @@ class Product
 
 $product1 = new Product('dsas', 'titolino', '...', 'hgsa55d4a5', 'pesce', 100, 20);
 $product2 = new Product('dsadsa', 'titolone', 'descrizione', 'd654gf65', 'cane', 8.99, 10);
-
-
-
-
-var_dump($product1);
-var_dump($product2);
