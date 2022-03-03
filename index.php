@@ -1,5 +1,5 @@
 <?php
-echo "ciao a tutti!";
+
 ?>
 
 
@@ -14,6 +14,19 @@ echo "ciao a tutti!";
 </head>
 
 <body>
+    <form action="Subscrited.php" method="GET">
+        <label for="name">Inserisci Nome</label>
+        <input type="text" name="name" id="name"> <br />
+        <label for="last-name">Inserisci Cognome</label>
+        <input type="text" name="last_name" id="last-name"><br />
+        <label for="date">Inserisci Data di nascita</label>
+        <input type="text" name="date" id="date"><br />
+        <label for="address">Inserisci Indirizzo</label>
+        <input type="text" name="address" id="address"><br />
+
+        <button type="submit">Procedi con l'acquisto</button>
+    </form>
+
 
 </body>
 

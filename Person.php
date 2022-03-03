@@ -55,5 +55,5 @@ class Person
     }
 }
 
-// $person1 = new Person('Franco', 'Bianchi', '22/12/1989', 'Via Roma, Matera 12345');
-// var_dump($person1);
+$person1 = new Person($_GET['name'],  $_GET['last_name'], $_GET['date'], $_GET['address']);
+var_dump($person1);
