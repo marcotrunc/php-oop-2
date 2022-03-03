@@ -1,5 +1,7 @@
 <?php
 
+use JetBrains\PhpStorm\Internal\ReturnTypeContract;
+
 class Product
 {
     public $brand;
@@ -10,20 +12,57 @@ class Product
     public $reference_animal;
     public $id;
 
-    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $discount = null)
+    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $discount)
     {
-        $this->brand = $brand;
-        $this->title = $title;
-        $this->description = $description;
-        $this->id = $id;
+        $this->setBrandName($brand);
+        $this->setTitle($title);
+        $this->setDescription($description);
+        $this->setId($id);
         $this->reference_animal = $reference_animal;
-        $this->price = $price;
-        $this->discount = $discount;
+        $this->setPrice($price);
+        $this->setDiscount($discount);
+    }
+
+    public function setBrandName($brand)
+    {
+        if (!is_string($brand)) return false;
+        return $this->brand = $brand;
+    }
+
+    public function setTitle($title)
+    {
+        if (!is_string($title)) return false;
+        return $this->title = $title;
+    }
+
+    public function setDescription($description)
+    {
+        if (!is_string($description)) return false;
+        return $this->description = $description;
+    }
+
+    public function setId($id)
+    {
+        if (!is_string($id)) return false;
+        return $this->id = $id;
+    }
+
+    public function setDiscount($discount)
+    {
+        if (!is_numeric($discount)) return false;
+        return $this->discount = $discount;
+    }
+    public function setPrice($price)
+    {
+        if (!is_numeric($price)) return false;
+        $perc = $this->discount;
+        $final_price = $price - ($price * ($perc / 100));
+        return $this->price = $final_price;
     }
 }
 
-$product1 = new Product('pippo', 'titolino', '...', 'hgsa55d4a5', 'pesce', 5.49, 20);
-$product2 = new Product('ciccio', 'titolone', 'descrizione', 'd654gf65', 'cane', 8.99,);
+$product1 = new Product('dsas', 'titolino', '...', 'hgsa55d4a5', 'pesce', 100, 20);
+$product2 = new Product('dsadsa', 'titolone', 'descrizione', 'd654gf65', 'cane', 8.99, 10);
 
 
 
