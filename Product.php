@@ -32,6 +32,7 @@ class Product
         if (!is_string($brand)) return false;
         return $this->brand = $brand;
     }
+
     // Title
     public function getTitle()
     {
@@ -42,6 +43,7 @@ class Product
         if (!is_string($title)) return false;
         return $this->title = $title;
     }
+
     //Description
     public function getDescription()
     {
@@ -52,6 +54,7 @@ class Product
         if (!is_string($description)) return false;
         return $this->description = $description;
     }
+
     // Id
     public function getId()
     {
@@ -62,6 +65,7 @@ class Product
         if (!is_string($id)) return false;
         return $this->id = $id;
     }
+
     //Animal
     public function getAnimal()
     {
