@@ -6,10 +6,12 @@ require_once __DIR__ . '/Product/Toys.php';
 
 
 $game1 = new Game('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
+$game2 = new Game('ciccio', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
 
 $cart1 = new Cart;
 
 $cart1->addProduct($game1);
+$cart1->addProduct($game2);
 
 
 $persona1 = new Person('Marco', 'Truncellito', '29-08-1995', 'Loc.Anglona, Tursi (MT)', $cart1);

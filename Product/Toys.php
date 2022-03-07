@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/Product.php';
-class Game extends Product
+class Toys extends Product
 {
     public $purpose;
     public $material;
@@ -33,9 +33,9 @@ class Game extends Product
     }
 }
 
-$game1 = new Game('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
+// $game1 = new Toys('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
 
-var_dump($game1);
-echo $game1->getPurpose();
-echo $game1->getMaterial();
-echo $game1->getBrandName();
+
+// echo $game1->getPurpose();
+// echo $game1->getMaterial();
+// echo $game1->getBrandName();

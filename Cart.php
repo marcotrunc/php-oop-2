@@ -17,6 +17,11 @@ class Cart
             if ($product === $this->products[$i]) unset($this->products[$i]);
         }
     }
+
+    public function getProducts($i)
+    {
+        return $this->products[$i];
+    }
 }
 
 // $cart1 = new Cart;
