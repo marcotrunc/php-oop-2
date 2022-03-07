@@ -1,7 +1,5 @@
 <?php
 
-use JetBrains\PhpStorm\Internal\ReturnTypeContract;
-
 class Product
 {
     public $brand;
@@ -11,8 +9,9 @@ class Product
     public $discount;
     public $reference_animal;
     public $id;
+    public $quantity;
 
-    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $discount)
+    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $quantity, $discount)
     {
         $this->setBrandName($brand);
         $this->setTitle($title);
@@ -21,6 +20,7 @@ class Product
         $this->setAnimal($reference_animal);
         $this->setDiscount($discount);
         $this->setPrice($price);
+        $this->setQuantity($quantity);
     }
     // Brand Name
     public function getBrandName()
@@ -100,7 +100,10 @@ class Product
         $final_price = $price - ($price * ($perc / 100));
         return $this->price = round($final_price, 2);
     }
+    //Quantity
+    public function setQuantity($quantity)
+    {
+        if (!is_numeric($quantity)) return false;
+        return $this->quantity = $quantity;
+    }
 }
-
-$product1 = new Product('dsas', 'titolino', '...', 'hgsa55d4a5', 'pesce', 100, 20);
-$product2 = new Product('dsadsa', 'titolone', 'descrizione', 'd654gf65', 'cane', 8.99, 10);

@@ -1,17 +1,20 @@
 <?php
+require_once __DIR__ . '/../Cart.php';
 class Person
 {
     public $name;
     public $last_name;
     public $date;
     public $address;
+    public $cart;
 
-    public function __construct($name, $last_name, $date, $address)
+    public function __construct($name, $last_name, $date, $address, $cart)
     {
         $this->setName($name);
         $this->setlastName($last_name);
         $this->setDate($date);
         $this->address = $address;
+        $this->setCart($cart);
     }
     // Name
     public function getName()
@@ -53,7 +56,10 @@ class Person
         if (!is_string($address)) return false; //
         return $this->address = $address;
     }
+    // Cart
+    public function setCart($cart)
+    {
+        if (!($cart instanceof Cart)) throw new Exception('$cart must be instance of Cart');
+        return $this->cart = $cart;
+    }
 }
-
-$person1 = new Person($_GET['name'],  $_GET['last_name'], $_GET['date'], $_GET['address']);
-var_dump($person1);

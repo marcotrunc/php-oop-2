@@ -5,9 +5,9 @@ class Game extends Product
     public $purpose;
     public $material;
 
-    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $discount, $purpose, $material)
+    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $quantity, $discount, $purpose, $material)
     {
-        parent::__construct($brand, $title, $description, $id, $reference_animal, $price, $discount);
+        parent::__construct($brand, $title, $description, $id, $reference_animal, $price, $quantity, $discount);
         $this->setPurpose($purpose);
         $this->setMaterial($material);
     }
@@ -33,7 +33,7 @@ class Game extends Product
     }
 }
 
-$game1 = new Game('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 27, 'training', 'rubber');
+$game1 = new Game('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
 
 var_dump($game1);
 echo $game1->getPurpose();

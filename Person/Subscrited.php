@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/Person.php';
-require_once __DIR__ . '/Database.php';
+require_once __DIR__ . '../Database/Database.php';
 class Subscrited extends Person
 {
     public $username;
@@ -58,20 +58,20 @@ class Subscrited extends Person
     }
 }
 
-$subscrited1 = new Subscrited('Giovanni', 'Verdi', '12/04/1996', 'Via ags, Milano, 45', 'gioV', '1234', '05', '1515561616165');
-$subscrited2 = new Subscrited('Gio', 'Verdi', '12/04/1996', 'Via ags, Milano, 45', 'ciccioV', '1234', '05', '1515561616165');
+// $subscrited1 = new Subscrited('Giovanni', 'Verdi', '12/04/1996', 'Via ags, Milano, 45', 'gioV', '1234', '05', '1515561616165');
+// $subscrited2 = new Subscrited('Gio', 'Verdi', '12/04/1996', 'Via ags, Milano, 45', 'ciccioV', '1234', '05', '1515561616165');
 
-var_dump($subscrited1);
-
-
+// var_dump($subscrited1);
 
 
-//if the user logs in with username
-function isSubscrited($database, $sub)
-{
-    $registered = false;
-    foreach ($database as $customer) {
-        if ($sub->getUsername() === $customer['user_name'] && $sub->getPassword() === $customer['password'])  $registered = true;
-    }
-    return $registered;
-}
+
+
+// //if the user logs in with username
+// function isSubscrited($database, $sub)
+// {
+//     $registered = false;
+//     foreach ($database as $customer) {
+//         if ($sub->getUsername() === $customer['user_name'] && $sub->getPassword() === $customer['password'])  $registered = true;
+//     }
+//     return $registered;
+// }

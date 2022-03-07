@@ -5,9 +5,9 @@ class Food extends Product
     public $content;
     public $type_food;
 
-    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $discount, $content, $type_food)
+    public function __construct($brand, $title, $description, $id, $reference_animal, $price, $quantity, $discount, $content, $type_food)
     {
-        parent::__construct($brand, $title, $description, $id, $reference_animal, $price, $discount);
+        parent::__construct($brand, $title, $description, $id, $reference_animal, $price, $quantity, $discount);
         $this->setContent($content);
         $this->setType($type_food);
     }
@@ -33,8 +33,5 @@ class Food extends Product
     }
 }
 
-$food1 = new Food('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 27, 'Pork', 'wet Food');
-
-var_dump($food1);
-echo $food1->getType();
-echo $food1->getBrandName();
+$food1 = new Food('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'Pork', 'wet Food');
+$food2 = new Food('Ciccio', 'pippo', 'pluto', '54', 'cat', 5.10, 20, 33, 'Pork', 'wet Food');

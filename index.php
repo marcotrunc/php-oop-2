@@ -1,9 +1,23 @@
 <?php
+require_once __DIR__ . '/Person/Person.php';
+require_once __DIR__ . '/Cart.php';
+require_once __DIR__ . '/Product/Toys.php';
 
+
+
+$game1 = new Game('Stuzzy', 'Stuzzy Dog Monoproteico', 'Stuzzy Monoproteico al Maiale cibo umido per cani soggetti ad intolleranze alimentari.', '22s', 'dog', 4.10, 10, 27, 'training', 'rubber');
+
+$cart1 = new Cart;
+
+$cart1->addProduct($game1);
+
+
+$persona1 = new Person('Marco', 'Truncellito', '29-08-1995', 'Loc.Anglona, Tursi (MT)', $cart1);
+var_dump($persona1);
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +28,7 @@
 </head>
 
 <body>
-    <form action="Subscrited.php" method="GET">
+   <form action="Subscrited.php" method="GET">
         <label for="name">Inserisci Nome</label>
         <input type="text" name="name" id="name"> <br />
         <label for="last-name">Inserisci Cognome</label>
@@ -25,9 +39,10 @@
         <input type="text" name="address" id="address"><br />
 
         <button type="submit">Procedi con l'acquisto</button>
-    </form>
+    </form> 
+
 
 
 </body>
 
-</html>
+</html> -->
